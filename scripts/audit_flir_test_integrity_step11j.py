@@ -41,7 +41,7 @@ def safe_rel_filename(record:dict)->Path:
     if not isinstance(raw,str) or '\\' in raw:
         raise ValueError('Invalid COCO file_name')
     p=Path(raw)
-    if not raw or p.is_absolute() or '..' in p.parts or len(p.parts)<2:
+    if not raw or raw.startswith('/') or p.is_absolute() or '..' in p.parts or len(p.parts)<2:
         raise ValueError(f'Unsafe/unsupported COCO image filename: {raw}')
     return p
 
