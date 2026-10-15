@@ -1,0 +1,13 @@
+# Step 11K: DATA PREPARATION ONLY. No YOLO/FSRCNN inference, training, threshold search.
+step11j_config: configs/flir_test_integrity_step11j.yaml
+step11j_report: reports/test/step11j_integrity_audit_v1/summary.json
+source_split: video_thermal_test
+source_type: coco_referenced_8bit_jpg
+lr_preprocessing: pil_bicubic
+expected_frames: 3749
+expected_videos: 8
+expected_coco_annotations: 62317
+expected_kept_boxes: 62015
+expected_test_coco_sha256: 8da913c6cf57fd148afdd2ec81716e6bc44f1869308b92d6b6280263788d487a
+expected_step11j_config_sha256: 003438a60bef7105d8cca1eba7e7e39ea066ec01084cbfe167cf029d9b293715
+# Do not use test outcomes to choose confidence. Test evaluation is a separate phase.

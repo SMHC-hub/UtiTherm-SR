@@ -1,0 +1,38 @@
+# Step 11L: PRE-REGISTERED FLIR VIDEO TEST EVALUATION (one locked test split).
+# Derived from frozen DEV protocol in Step 11G and previously explored 0.40 in Step 11I.
+# Never alter these choices after inspecting test predictions. Preserve this config.
+base_development_config: configs/development_eval.yaml
+step11g_config: configs/bicubic_first_deterministic_step11g.yaml
+step11g_reference_a: reports/development/step11g_full_200_a/summary.json
+step11g_verified_b: reports/development/step11g_full_200_b/summary.json
+step11k_config: configs/flir_frozen_test_preparation_step11k.yaml
+step11k_report: reports/test/step11k_test_preparation_v1
+prepared_dataset: data/processed/yolo_flir_lr_x2_test_step11k_v1
+large_sr_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+expected_test_images: 3749
+expected_test_sequences: 8
+expected_test_boxes: 62015
+expected_untouched_test_manifest_sha256: af97d628d3984eca440668603d775f3153bfd79962b4e8629bc1f6fed0b8a35c
+expected_step11k_config_sha256: 3303352fbc8036cc0dc8bafcb5f43477e96b0d274374a1eabeb989bc0e6318dc
+expected_source_coco_sha256: 8da913c6cf57fd148afdd2ec81716e6bc44f1869308b92d6b6280263788d487a
+methods:
+  - full_bicubic_640
+  - full_large_fsrcnn_640
+  - random4_bicubic_first_h10
+  - contrast4_bicubic_first_h10
+budget_tiles: 4
+halo: 10
+feather_hr_px: 8
+confidence_thresholds: [0.25, 0.40]
+reference_prediction_confidence: 0.25
+nms_iou: 0.70
+matching_iou: 0.50
+fp_penalty: 0.25
+random_seed: 42
+bootstrap_seed: 143
+bootstrap_iterations: 4000
+primary_comparison: contrast4_at_0.25_vs_bicubic_at_0.25
+secondary_comparisons:
+  - contrast4_at_0.40_vs_bicubic_at_0.40
+  - contrast4_at_0.40_vs_bicubic_at_0.25
+# Test-set confidence/utility cannot be used to select models or thresholds.

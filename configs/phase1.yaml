@@ -1,0 +1,34 @@
+experiment:
+  name: utitherm-phase1
+  seed: 42
+  scale_factor: 2
+  evaluation_split: test
+
+dataset:
+  name: flir-adas
+  input_mode: thermal_8bit  # Do not mix with 14-bit TIFF without a separate pipeline.
+  raw_root: data/raw/flir
+  output_root: data/processed
+  preserve_originals: true
+
+detection:
+  architecture: yolo11n
+  pretrained_weights: yolo11n.pt
+  image_size: 640
+  batch_size: 8
+  amp: true
+
+sr:
+  first_baseline: bicubic
+  learned_baseline: fsrcnn_x2
+
+system:
+  ram_limit_gb: 12
+  initial_batch_size: 8
+  device: cuda
+
+research:
+  candidate_recall_target: measure_not_assume
+  utility_predictor: not_implemented
+  budget_controller: not_implemented
+  test_set_locked: true

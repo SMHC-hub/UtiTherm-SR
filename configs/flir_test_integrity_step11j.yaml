@@ -1,0 +1,29 @@
+# Step 11J: audit-only, no test detector inference, no SR, no training.
+raw_root: data/raw/FLIR_ADAS_v2
+processed_validation_root: data/processed/yolo_flir_lr_x2
+expected_images: {train: 10742, val: 1144, test: 3749}
+expected_sequences: {train: 133, val: 17, test: 8}
+hr_size: [640, 512]
+lr_size: [320, 256]
+model_class_names:
+  0: person
+  1: bike
+  2: car
+  3: motor
+  4: bus
+  5: truck
+  6: other_vehicle
+  7: light
+  8: sign
+coco_category_to_yolo:
+  1: 0     # person
+  2: 1     # bike
+  3: 2     # car
+  4: 3     # motor
+  6: 4     # bus
+  8: 5     # truck
+  79: 6    # other vehicle
+  10: 7    # traffic light
+  12: 8    # sign
+validation_pixel_audit_images: 51
+validation_label_audit_images: 1144
