@@ -43,7 +43,7 @@ Network structure:
 - **Expanding:**          `Conv2d(36→168, 1×1)` + PReLU
 - **Upsampling:**         `ConvTranspose2d(168→1, 9×9, stride=2)`
 
-Input: `[B, 1, H, W]` float32 in `[0, 1]`  
+Input: `[B, 1, H, W]` float32 in `[0, 1]`<br>
 Output: `[B, 1, 2H, 2W]` float32 (unclipped, clip to `[0, 1]` before display)
 
 The **Small FSRCNN** baseline (`fsrcnn_x2_v1.pt`) uses `d=56, s=12, m=4`.
