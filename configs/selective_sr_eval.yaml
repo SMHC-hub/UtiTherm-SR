@@ -1,0 +1,17 @@
+# UtiTherm-SR Step 6A: prediction-guided selective bicubic pilot.
+# WARNING: the original YOLO detector has trained on these TRAIN-domain frames.
+# This is a predictor-held-out pilot, NOT an independent detector test.
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+utility_csv: reports/utility/probe_train_100_v1/roi_utility.csv
+split_manifest: reports/utility/predictor_v1/split_manifest.json
+predictor_checkpoint: models/utility/roi_utility_v1.pt
+detector_checkpoint: models/detection/yolo11n_lr_baseline_v1.pt
+budget_tiles: 4
+seed: 42
+imgsz: 640
+confidence: 0.25
+nms_iou: 0.7
+false_positive_penalty: 0.25
+feather_hr_px: 8
+val_batch: 2
+device: '0'
