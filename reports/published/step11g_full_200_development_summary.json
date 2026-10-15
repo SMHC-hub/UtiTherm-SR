@@ -1,0 +1,253 @@
+{
+  "base_config_sha256": "cce6e6d5463bfcb20cc3529adb3791803184f97192683393e465009da5ca8be2",
+  "config_sha256": "0b7200b1fee656098ff71c253daccc51c281882ae6028910ef8e98fd47ab4c7a",
+  "created_utc": "2026-10-14T23:48:49.570091+00:00",
+  "cross_container_reference": "reports/development/step11g_full_200_a/summary.json",
+  "cross_container_verified": true,
+  "cross_run_mismatch_count": 0,
+  "detector_sha256": "890ed93b8d6466244ebe703c0955414b535e37672db19dce08da6551b816677c",
+  "deterministic_settings": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_allow_tf32": false,
+    "opencv_threads": 1,
+    "torch_deterministic_algorithms": true
+  },
+  "environment": {
+    "cudnn": "91002",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "numpy": "2.3.4",
+    "opencv": "5.0.0",
+    "python": "3.11.14",
+    "pytorch": "2.9.1+cu128",
+    "torch_cuda": "12.8",
+    "ultralytics": "8.4.177"
+  },
+  "frozen_checkpoint_sha256": {
+    "detector_checkpoint": "890ed93b8d6466244ebe703c0955414b535e37672db19dce08da6551b816677c",
+    "predictor_checkpoint": "de5a28885b60239999eb24da17204c3ab6ce86e95dffb2e72cd8b3d00a4834dd",
+    "sr_checkpoint": "a456c4e4bc726a982f73821f1f54affc8a96936bae61e5e4a89bf72d2ef8b42b"
+  },
+  "historical_step10d_counts_are_not_exact_reference": true,
+  "history_step10d_sha256": "5dad35a12f8697ef2653a0b625b60ccecc8c0eacf3a890cd0a64ea05aed4f702",
+  "images": 200,
+  "large_sr_sha256": "445b4adc8ad53c18274cf7d101ca54ac1e5ab7bea35c85bd53b5688ff729a5ae",
+  "limitations": [
+    "Frozen FLIR validation development sample is not independent/untouched.",
+    "Detector diagnostics conf .25 IoU .50 are not standard mAP.",
+    "Reference Step10D ran nondeterministically; do not demand numeric identity across protocols.",
+    "Repeat fingerprint checks include SR and exact YOLO floating-point predictions.",
+    "SHA fingerprints are computed after timed inference; deterministic kernels may affect latency.",
+    "Random-four is a single frozen seed; cluster bootstrap with only 17 sequences is exploratory."
+  ],
+  "manifest_sha256": "5fa3da39d8824a8d289eead89294054bedb360ca0830a9ed91e49ce9a2bf3cfb",
+  "methods": [
+    "full_bicubic_640",
+    "full_large_fsrcnn_640",
+    "random4_bicubic_first_h10",
+    "contrast4_bicubic_first_h10"
+  ],
+  "protocol": "STEP11G_DETERMINISTIC_BICUBIC_FIRST_4ROI_FLIR_DEV_V1",
+  "repeats_per_image": 3,
+  "repeats_verified": true,
+  "results": {
+    "comparisons": {
+      "contrast4_bicubic_first_h10__vs__full_bicubic_640": {
+        "delta_fp": 88,
+        "delta_latency_ms": 9.026088,
+        "delta_small_tp": 15,
+        "delta_utility_per_image": -0.035,
+        "delta_utility_total": -7.0,
+        "image_utility_wins_ties_losses": {
+          "losses": 69,
+          "ties": 75,
+          "wins": 56
+        },
+        "sequence_bootstrap_latency_ms_95ci": [
+          8.930727,
+          9.116747
+        ],
+        "sequence_bootstrap_utility_per_image_95ci": [
+          -0.181253,
+          0.111523
+        ],
+        "sequence_utility_wins_ties_losses": {
+          "losses": 9,
+          "ties": 3,
+          "wins": 5
+        }
+      },
+      "contrast4_bicubic_first_h10__vs__full_large_fsrcnn_640": {
+        "delta_fp": 18,
+        "delta_latency_ms": -13.572451,
+        "delta_small_tp": 7,
+        "delta_utility_per_image": 0.0125,
+        "delta_utility_total": 2.5,
+        "image_utility_wins_ties_losses": {
+          "losses": 67,
+          "ties": 65,
+          "wins": 68
+        },
+        "sequence_bootstrap_latency_ms_95ci": [
+          -13.676845,
+          -13.475885
+        ],
+        "sequence_bootstrap_utility_per_image_95ci": [
+          -0.068185,
+          0.0936
+        ],
+        "sequence_utility_wins_ties_losses": {
+          "losses": 6,
+          "ties": 1,
+          "wins": 10
+        }
+      },
+      "contrast4_bicubic_first_h10__vs__random4_bicubic_first_h10": {
+        "delta_fp": 82,
+        "delta_latency_ms": 0.347561,
+        "delta_small_tp": 13,
+        "delta_utility_per_image": -0.0375,
+        "delta_utility_total": -7.5,
+        "image_utility_wins_ties_losses": {
+          "losses": 66,
+          "ties": 88,
+          "wins": 46
+        },
+        "sequence_bootstrap_latency_ms_95ci": [
+          0.25031,
+          0.442863
+        ],
+        "sequence_bootstrap_utility_per_image_95ci": [
+          -0.135115,
+          0.067265
+        ],
+        "sequence_utility_wins_ties_losses": {
+          "losses": 10,
+          "ties": 1,
+          "wins": 6
+        }
+      },
+      "full_large_fsrcnn_640__vs__full_bicubic_640": {
+        "delta_fp": 70,
+        "delta_latency_ms": 22.598539,
+        "delta_small_tp": 8,
+        "delta_utility_per_image": -0.0475,
+        "delta_utility_total": -9.5,
+        "image_utility_wins_ties_losses": {
+          "losses": 83,
+          "ties": 52,
+          "wins": 65
+        },
+        "sequence_bootstrap_latency_ms_95ci": [
+          22.495673,
+          22.697578
+        ],
+        "sequence_bootstrap_utility_per_image_95ci": [
+          -0.170864,
+          0.088237
+        ],
+        "sequence_utility_wins_ties_losses": {
+          "losses": 11,
+          "ties": 0,
+          "wins": 6
+        }
+      },
+      "random4_bicubic_first_h10__vs__full_bicubic_640": {
+        "delta_fp": 6,
+        "delta_latency_ms": 8.678527,
+        "delta_small_tp": 2,
+        "delta_utility_per_image": 0.0025,
+        "delta_utility_total": 0.5,
+        "image_utility_wins_ties_losses": {
+          "losses": 48,
+          "ties": 100,
+          "wins": 52
+        },
+        "sequence_bootstrap_latency_ms_95ci": [
+          8.603252,
+          8.754832
+        ],
+        "sequence_bootstrap_utility_per_image_95ci": [
+          -0.086296,
+          0.078439
+        ],
+        "sequence_utility_wins_ties_losses": {
+          "losses": 6,
+          "ties": 3,
+          "wins": 8
+        }
+      }
+    },
+    "images": 200,
+    "limitations": [
+      "Reused frozen FLIR VAL development images already analyzed repeatedly; NOT independent final test.",
+      "Diagnostics are class-aware small-object TP/FP at conf .25 IoU .50, not standard mAP.",
+      "Actual FOUR-tile combined SR images, not retrospective single-tile sums.",
+      "Single-seed random-four selection. Multiple random seeds needed for robust random baseline.",
+      "Only 17 video clusters and exploratory confidence intervals.",
+      "Runtime measured on GPU after warmup; excludes disk IO and checkpoint loading.",
+      "Contrast top4 was selected after studying related train-domain data; no final novelty claim."
+    ],
+    "methods": {
+      "contrast4_bicubic_first_h10": {
+        "all_tp": 1474,
+        "fp": 843,
+        "mean_detector_ms": 10.397618,
+        "mean_image_median_total_ms": 19.478253,
+        "mean_peak_torch_mib": 85.786,
+        "mean_processed_lr_pixels": 33600.0,
+        "mean_selector_ms": 0.446304,
+        "mean_sr_ms": 8.571838,
+        "small_gt": 2097,
+        "small_recall_conf_025": 0.592752,
+        "small_tp": 1243
+      },
+      "full_bicubic_640": {
+        "all_tp": 1461,
+        "fp": 755,
+        "mean_detector_ms": 10.18679,
+        "mean_image_median_total_ms": 10.452165,
+        "mean_peak_torch_mib": 61.341,
+        "mean_processed_lr_pixels": 0.0,
+        "mean_selector_ms": 0.005574,
+        "mean_sr_ms": 0.255182,
+        "small_gt": 2097,
+        "small_recall_conf_025": 0.585598,
+        "small_tp": 1228
+      },
+      "full_large_fsrcnn_640": {
+        "all_tp": 1451,
+        "fp": 825,
+        "mean_detector_ms": 10.647624,
+        "mean_image_median_total_ms": 33.050704,
+        "mean_peak_torch_mib": 147.904,
+        "mean_processed_lr_pixels": 81920.0,
+        "mean_selector_ms": 0.005627,
+        "mean_sr_ms": 22.316991,
+        "small_gt": 2097,
+        "small_recall_conf_025": 0.589413,
+        "small_tp": 1236
+      },
+      "random4_bicubic_first_h10": {
+        "all_tp": 1459,
+        "fp": 761,
+        "mean_detector_ms": 10.431876,
+        "mean_image_median_total_ms": 19.130692,
+        "mean_peak_torch_mib": 85.786,
+        "mean_processed_lr_pixels": 33600.0,
+        "mean_selector_ms": 0.042166,
+        "mean_sr_ms": 8.609953,
+        "small_gt": 2097,
+        "small_recall_conf_025": 0.586552,
+        "small_tp": 1230
+      }
+    },
+    "repeats_per_image": 3,
+    "sequences": 17,
+    "utility_definition": "delta small TP - 0.25 * delta FP (conf=0.25, IoU=0.50)"
+  },
+  "sequences": 17,
+  "task": "Step11G: actual four-region Bicubic-first in deterministic GPU mode"
+}

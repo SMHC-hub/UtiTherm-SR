@@ -1,0 +1,299 @@
+{
+  "config_sha256": "935a1c68ed180ed43ef40a4081e357f6a797331edc585f8ac8e2a3ef4c56ee1e",
+  "created_utc": "2026-10-15T02:08:23.533748+00:00",
+  "cross_container_reference": "reports/test/step11l_full_3749_a/summary.json",
+  "cross_container_verified": true,
+  "cross_run_mismatch_count": 0,
+  "deterministic_settings": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_allow_tf32": false,
+    "opencv_threads": 1,
+    "torch_deterministic_algorithms": true
+  },
+  "environment": {
+    "cudnn": "91002",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "numpy": "2.3.4",
+    "opencv": "5.0.0",
+    "python": "3.11.14",
+    "pytorch": "2.9.1+cu128",
+    "torch_cuda": "12.8",
+    "ultralytics": "8.4.177"
+  },
+  "images": 3749,
+  "limitations": [
+    "This is the first declared test split from FLIR ADAS v2, not a different dataset/camera.",
+    "Eight independent VIDEO groups; individual frames within each group are correlated.",
+    "Conf 0.40 was identified on development data, not independently selected from TEST.",
+    "Confidence 0.40 is post-NMS filtering of YOLO outputs inferred with conf 0.25; not rerun at conf 0.40.",
+    "IoU 0.50 class-aware small TP/FP utility is a project diagnostic, not standard mAP.",
+    "Excluded COCO categories can appear in scenes; some detections may count as FPs.",
+    "All four methods use identical trained models and 8-bit thermal-to-LR pipeline.",
+    "Single random-4 seed; do not claim robustness over random selector seeds.",
+    "Latency uses deterministic kernels and GPU sync, excludes disk IO/model loading.",
+    "Confidence/selection must NOT be changed based on this test outcome."
+  ],
+  "methods": [
+    "full_bicubic_640",
+    "full_large_fsrcnn_640",
+    "random4_bicubic_first_h10",
+    "contrast4_bicubic_first_h10"
+  ],
+  "predeclared_primary_comparison": "contrast4@0.25 versus bicubic@0.25",
+  "predeclared_secondary_comparisons": [
+    "contrast4@0.40 versus bicubic@0.40",
+    "contrast4@0.40 versus bicubic@0.25"
+  ],
+  "prepared_image_names_sha256": "ae03a2bed443ce4df798946be1941e7c852148a3cad92a407d3a1529165cfc33",
+  "protocol": "STEP11L_PREDECLARED_SEQUENCE_DISJOINT_FLIR_VIDEO_TEST_V1",
+  "repeats_per_image": 3,
+  "repeats_verified": true,
+  "results": {
+    "by_confidence": {
+      "0.25": {
+        "contrast4_bicubic_first_h10": {
+          "absolute_utility": 24091.25,
+          "all_tp": 30961,
+          "fp": 17199,
+          "mean_image_median_total_ms": 19.310356,
+          "small_gt": 58379,
+          "small_recall": 0.486322,
+          "small_tp": 28391
+        },
+        "full_bicubic_640": {
+          "absolute_utility": 24220.5,
+          "all_tp": 31146,
+          "fp": 16722,
+          "mean_image_median_total_ms": 10.309786,
+          "small_gt": 58379,
+          "small_recall": 0.486493,
+          "small_tp": 28401
+        },
+        "full_large_fsrcnn_640": {
+          "absolute_utility": 23542.0,
+          "all_tp": 29750,
+          "fp": 16516,
+          "mean_image_median_total_ms": 32.741899,
+          "small_gt": 58379,
+          "small_recall": 0.473989,
+          "small_tp": 27671
+        },
+        "random4_bicubic_first_h10": {
+          "absolute_utility": 24095.75,
+          "all_tp": 30929,
+          "fp": 16825,
+          "mean_image_median_total_ms": 18.943686,
+          "small_gt": 58379,
+          "small_recall": 0.484798,
+          "small_tp": 28302
+        }
+      },
+      "0.40": {
+        "contrast4_bicubic_first_h10": {
+          "absolute_utility": 22160.25,
+          "all_tp": 26210,
+          "fp": 6427,
+          "mean_image_median_total_ms": 19.310356,
+          "small_gt": 58379,
+          "small_recall": 0.407116,
+          "small_tp": 23767
+        },
+        "full_bicubic_640": {
+          "absolute_utility": 22342.75,
+          "all_tp": 26401,
+          "fp": 5681,
+          "mean_image_median_total_ms": 10.309786,
+          "small_gt": 58379,
+          "small_recall": 0.407047,
+          "small_tp": 23763
+        },
+        "full_large_fsrcnn_640": {
+          "absolute_utility": 21745.25,
+          "all_tp": 25320,
+          "fp": 6503,
+          "mean_image_median_total_ms": 32.741899,
+          "small_gt": 58379,
+          "small_recall": 0.400332,
+          "small_tp": 23371
+        },
+        "random4_bicubic_first_h10": {
+          "absolute_utility": 22165.5,
+          "all_tp": 26167,
+          "fp": 5986,
+          "mean_image_median_total_ms": 18.943686,
+          "small_gt": 58379,
+          "small_recall": 0.405317,
+          "small_tp": 23662
+        }
+      }
+    },
+    "metric": "small-object TP minus 0.25*FP; class-aware matching IoU >=0.50; conf is post-NMS cutoff",
+    "predeclared_comparisons": {
+      "primary_contrast025_vs_bicubic025": {
+        "a": {
+          "confidence": 0.25,
+          "method": "contrast4_bicubic_first_h10"
+        },
+        "b": {
+          "confidence": 0.25,
+          "method": "full_bicubic_640"
+        },
+        "delta_fp": 477,
+        "delta_small_tp": -10,
+        "delta_utility_per_image": -0.034476,
+        "delta_utility_total": -129.25,
+        "image_wins_ties_losses": {
+          "losses": 1531,
+          "ties": 938,
+          "wins": 1280
+        },
+        "num_sequences": 8,
+        "sequence_bootstrap_95ci_per_image_exploratory": [
+          -0.242024,
+          0.177418
+        ],
+        "sequence_wins_ties_losses": {
+          "losses": 6,
+          "ties": 0,
+          "wins": 2
+        }
+      },
+      "secondary_contrast040_vs_bicubic025": {
+        "a": {
+          "confidence": 0.4,
+          "method": "contrast4_bicubic_first_h10"
+        },
+        "b": {
+          "confidence": 0.25,
+          "method": "full_bicubic_640"
+        },
+        "delta_fp": -10295,
+        "delta_small_tp": -4634,
+        "delta_utility_per_image": -0.549547,
+        "delta_utility_total": -2060.25,
+        "image_wins_ties_losses": {
+          "losses": 1882,
+          "ties": 678,
+          "wins": 1189
+        },
+        "num_sequences": 8,
+        "sequence_bootstrap_95ci_per_image_exploratory": [
+          -1.195028,
+          0.151393
+        ],
+        "sequence_wins_ties_losses": {
+          "losses": 5,
+          "ties": 0,
+          "wins": 3
+        }
+      },
+      "secondary_contrast040_vs_bicubic040": {
+        "a": {
+          "confidence": 0.4,
+          "method": "contrast4_bicubic_first_h10"
+        },
+        "b": {
+          "confidence": 0.4,
+          "method": "full_bicubic_640"
+        },
+        "delta_fp": 746,
+        "delta_small_tp": 4,
+        "delta_utility_per_image": -0.04868,
+        "delta_utility_total": -182.5,
+        "image_wins_ties_losses": {
+          "losses": 1365,
+          "ties": 1282,
+          "wins": 1102
+        },
+        "num_sequences": 8,
+        "sequence_bootstrap_95ci_per_image_exploratory": [
+          -0.320148,
+          0.185607
+        ],
+        "sequence_wins_ties_losses": {
+          "losses": 6,
+          "ties": 0,
+          "wins": 2
+        }
+      },
+      "secondary_full_fsrcnn025_vs_bicubic025": {
+        "a": {
+          "confidence": 0.25,
+          "method": "full_large_fsrcnn_640"
+        },
+        "b": {
+          "confidence": 0.25,
+          "method": "full_bicubic_640"
+        },
+        "delta_fp": -206,
+        "delta_small_tp": -730,
+        "delta_utility_per_image": -0.180982,
+        "delta_utility_total": -678.5,
+        "image_wins_ties_losses": {
+          "losses": 1735,
+          "ties": 716,
+          "wins": 1298
+        },
+        "num_sequences": 8,
+        "sequence_bootstrap_95ci_per_image_exploratory": [
+          -0.475717,
+          0.121397
+        ],
+        "sequence_wins_ties_losses": {
+          "losses": 6,
+          "ties": 0,
+          "wins": 2
+        }
+      },
+      "secondary_random025_vs_bicubic025": {
+        "a": {
+          "confidence": 0.25,
+          "method": "random4_bicubic_first_h10"
+        },
+        "b": {
+          "confidence": 0.25,
+          "method": "full_bicubic_640"
+        },
+        "delta_fp": 103,
+        "delta_small_tp": -99,
+        "delta_utility_per_image": -0.033276,
+        "delta_utility_total": -124.75,
+        "image_wins_ties_losses": {
+          "losses": 1104,
+          "ties": 1677,
+          "wins": 968
+        },
+        "num_sequences": 8,
+        "sequence_bootstrap_95ci_per_image_exploratory": [
+          -0.100538,
+          0.030485
+        ],
+        "sequence_wins_ties_losses": {
+          "losses": 6,
+          "ties": 0,
+          "wins": 2
+        }
+      }
+    }
+  },
+  "sequences": 8,
+  "step11g_provenance": {
+    "base_config_sha256": "cce6e6d5463bfcb20cc3529adb3791803184f97192683393e465009da5ca8be2",
+    "detector_sha256": "890ed93b8d6466244ebe703c0955414b535e37672db19dce08da6551b816677c",
+    "large_sr_sha256": "445b4adc8ad53c18274cf7d101ca54ac1e5ab7bea35c85bd53b5688ff729a5ae",
+    "step11g_a_sha256": "dd074917cdcd8855e6e824115be7e267721fc1ec0d5d2903200450bfd6c659a1",
+    "step11g_b_sha256": "f45e0fd21a269a96525f9d73f7c297742f52200ecdf531e228a0a3d9ba37a143",
+    "step11g_config_sha256": "0b7200b1fee656098ff71c253daccc51c281882ae6028910ef8e98fd47ab4c7a"
+  },
+  "step11k_manifest_content_sha256": "af97d628d3984eca440668603d775f3153bfd79962b4e8629bc1f6fed0b8a35c",
+  "step11k_summary_sha256": "23ae9764282a9a29e7a86bfd832e57c14eaa7b4d3b50b708184ba7515d8ce88d",
+  "task": "Step11L: first locked video-disjoint FLIR TEST evaluation; not cross-dataset",
+  "test_performance_was_not_used_for_selection": true,
+  "thresholds": [
+    0.25,
+    0.4
+  ]
+}

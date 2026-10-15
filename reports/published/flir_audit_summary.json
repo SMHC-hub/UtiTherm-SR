@@ -1,0 +1,2208 @@
+{
+  "root": "/workspace/data/raw/FLIR_ADAS_v2",
+  "image_count": 46423,
+  "image_extensions": {
+    ".jpg": 30788,
+    ".tiff": 15635
+  },
+  "path_modality_counts": {
+    "unclassified_path": 15153,
+    "thermal_path": 31270
+  },
+  "top_level_image_counts": {
+    "images_rgb_train": 10319,
+    "images_rgb_val": 1085,
+    "images_thermal_train": 21484,
+    "images_thermal_val": 2288,
+    "video_rgb_test": 3749,
+    "video_thermal_test": 7498
+  },
+  "image_samples": [
+    {
+      "path": "images_rgb_train/data/video-23bsd9bsr962GdFBZ-frame-000221-arDqqfMYcrbEEqsex.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1800,
+      "height": 1600,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "images_rgb_train/data/video-BfJLkH7fCsS5Y9vQc-frame-002627-9tEvmvD3wXYhsc8A2.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1280,
+      "height": 1024,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "images_rgb_train/data/video-QTT9nPmNSQceyBezK-frame-005963-rRButEfjisH7HntRs.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1800,
+      "height": 1600,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "images_rgb_train/data/video-YCTTcCtQZiWiMEdJ7-frame-004050-cCNg4X6TMtYJo96Lq.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1800,
+      "height": 1600,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "images_rgb_train/data/video-o9XgPkCRX9FByejh7-frame-002554-LDym2N69ZrxawxYwW.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1800,
+      "height": 1600,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "images_thermal_train/analyticsData/video-2SReBn5LtAkL5HMj2-frame-009193-Y5C8QskLfAuY8LCPL.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/analyticsData/video-AEZAaF8epmvQv5Nfj-frame-017202-qZa22bzNNMGWrpNEL.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/analyticsData/video-JFiGa9oAAN2queuLt-frame-003587-TzEGQ5nXiCbECZZ8A.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/analyticsData/video-cprcATqPmWGnc3cgi-frame-001021-6HeJQXW83L2Hpy8rN.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/analyticsData/video-r68Yr9RPWEp5fW2ZF-frame-008933-Gb5nSatf7ypik6fnm.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/data/video-5YuhMWusfM3ZMtvDx-frame-000502-sQN8isY9wCeSXiLFh.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/data/video-DJYDQTZH7GLCqw3Tx-frame-005339-jZfzLmtqGjR5LsGjh.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/data/video-S5osy2ei487eAM2fw-frame-002883-kQwXdR9LFCSaJ6K8G.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/data/video-iTrM5ner4KQGLvpdC-frame-004533-SritDArBFELyN54ex.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_train/data/video-vvYEi6EdCrYXeHwpD-frame-015899-7WWswb2Gf7baP9Rub.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "images_thermal_val/data/video-kBvcuDMtYv2Z4kmXi-frame-004137-iySTehtkuKqEJHbvB.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "video_rgb_test/data/video-YnfPeH8i2uBWmsSd2-frame-000455-upGqXfM65GzDKAJ4n.jpg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 1224,
+      "height": 1024,
+      "modality_by_path": "unclassified_path"
+    },
+    {
+      "path": "video_thermal_test/analyticsData/video-5RSrbWYu9eokv5bvR-frame-000293-wbXutxiXqssH233m9.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "video_thermal_test/analyticsData/video-ePoikf5LyTTfqchga-frame-000717-DgETLPsDF5oScKSA7.tiff",
+      "format": "TIFF",
+      "mode": "I;16",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    },
+    {
+      "path": "video_thermal_test/data/video-ZAtDSNuZZjkZFvMAo-frame-000022-an44gG3esrSLogDHh.jpg",
+      "format": "JPEG",
+      "mode": "L",
+      "width": 640,
+      "height": 512,
+      "modality_by_path": "thermal_path"
+    }
+  ],
+  "unreadable_samples": [],
+  "coco_annotation_files": [
+    {
+      "path": "images_rgb_train/coco.json",
+      "images": 10318,
+      "annotations": 169174,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-23bsd9bsr962GdFBZ-frame-000221-arDqqfMYcrbEEqsex.jpg",
+        "data/video-23bsd9bsr962GdFBZ-frame-000236-CKrQ59pg7BzJDALSd.jpg",
+        "data/video-23bsd9bsr962GdFBZ-frame-000251-k8G4q7PbdPFf7Ymr5.jpg",
+        "data/video-23bsd9bsr962GdFBZ-frame-000266-gKf6k9v5tz6FM4ssf.jpg",
+        "data/video-23bsd9bsr962GdFBZ-frame-000281-WbvC2cEAjDaym8CGn.jpg"
+      ]
+    },
+    {
+      "path": "images_rgb_val/coco.json",
+      "images": 1085,
+      "annotations": 16909,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-CgGWcFRZQwyk48xKp-frame-000150-YbQHWyoYefb5kTX7g.jpg",
+        "data/video-CgGWcFRZQwyk48xKp-frame-000300-7NtCcLPKSNACFGNKx.jpg",
+        "data/video-CgGWcFRZQwyk48xKp-frame-000450-3LahX4oD5ipb9zmv7.jpg",
+        "data/video-CgGWcFRZQwyk48xKp-frame-000600-Ye5wikY5eg95tBtBz.jpg",
+        "data/video-CgGWcFRZQwyk48xKp-frame-000750-dHt47pEoySaexBYie.jpg"
+      ]
+    },
+    {
+      "path": "images_thermal_train/coco.json",
+      "images": 10742,
+      "annotations": 175040,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-GzdKTLbkG5F7gAunM-frame-000108-QHZmA4QTZCnzBG3HZ.jpg",
+        "data/video-GzdKTLbkG5F7gAunM-frame-000123-zT9WiGpogNTW2duPu.jpg",
+        "data/video-GzdKTLbkG5F7gAunM-frame-000138-hGJXmoECsAKraavzR.jpg",
+        "data/video-GzdKTLbkG5F7gAunM-frame-000153-CLf3aejSKSCNt94Aw.jpg",
+        "data/video-GzdKTLbkG5F7gAunM-frame-000168-T6ecK2ACpL8zQCKwL.jpg"
+      ]
+    },
+    {
+      "path": "images_thermal_val/coco.json",
+      "images": 1144,
+      "annotations": 16696,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-JhYLiFCieHQHaY8o7-frame-000000-xT7BXRKKyuWEsnywX.jpg",
+        "data/video-JhYLiFCieHQHaY8o7-frame-000300-guKooGzgx8fSSGQG7.jpg",
+        "data/video-JhYLiFCieHQHaY8o7-frame-000600-54cr88GJsdAyksdNj.jpg",
+        "data/video-JhYLiFCieHQHaY8o7-frame-000900-pdb96S7B7fgmguxPE.jpg",
+        "data/video-JhYLiFCieHQHaY8o7-frame-001200-n7sXgfg2LyFCYRzSc.jpg"
+      ]
+    },
+    {
+      "path": "video_rgb_test/coco.json",
+      "images": 3749,
+      "annotations": 84786,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-BzZspxAweF8AnKhWK-frame-000745-SSCRtAHcFjphNPczJ.jpg",
+        "data/video-BzZspxAweF8AnKhWK-frame-000746-MHHMa9SEkr4Be79Fg.jpg",
+        "data/video-BzZspxAweF8AnKhWK-frame-000747-vyomddRJxA4nf5ijm.jpg",
+        "data/video-BzZspxAweF8AnKhWK-frame-000748-9tAPb5b34YrhNisoL.jpg",
+        "data/video-BzZspxAweF8AnKhWK-frame-000749-haAffTiwkCuseTx9S.jpg"
+      ]
+    },
+    {
+      "path": "video_thermal_test/coco.json",
+      "images": 3749,
+      "annotations": 62317,
+      "invalid_bounding_boxes": 0,
+      "categories": [
+        {
+          "id": 1,
+          "name": "person"
+        },
+        {
+          "id": 2,
+          "name": "bike"
+        },
+        {
+          "id": 3,
+          "name": "car"
+        },
+        {
+          "id": 4,
+          "name": "motor"
+        },
+        {
+          "id": 5,
+          "name": "airplane"
+        },
+        {
+          "id": 6,
+          "name": "bus"
+        },
+        {
+          "id": 7,
+          "name": "train"
+        },
+        {
+          "id": 8,
+          "name": "truck"
+        },
+        {
+          "id": 9,
+          "name": "boat"
+        },
+        {
+          "id": 10,
+          "name": "light"
+        },
+        {
+          "id": 11,
+          "name": "hydrant"
+        },
+        {
+          "id": 12,
+          "name": "sign"
+        },
+        {
+          "id": 13,
+          "name": "parking meter"
+        },
+        {
+          "id": 14,
+          "name": "bench"
+        },
+        {
+          "id": 15,
+          "name": "bird"
+        },
+        {
+          "id": 16,
+          "name": "cat"
+        },
+        {
+          "id": 17,
+          "name": "dog"
+        },
+        {
+          "id": 18,
+          "name": "deer"
+        },
+        {
+          "id": 19,
+          "name": "sheep"
+        },
+        {
+          "id": 20,
+          "name": "cow"
+        },
+        {
+          "id": 21,
+          "name": "elephant"
+        },
+        {
+          "id": 22,
+          "name": "bear"
+        },
+        {
+          "id": 23,
+          "name": "zebra"
+        },
+        {
+          "id": 24,
+          "name": "giraffe"
+        },
+        {
+          "id": 25,
+          "name": "backpack"
+        },
+        {
+          "id": 26,
+          "name": "umbrella"
+        },
+        {
+          "id": 27,
+          "name": "handbag"
+        },
+        {
+          "id": 28,
+          "name": "tie"
+        },
+        {
+          "id": 29,
+          "name": "suitcase"
+        },
+        {
+          "id": 30,
+          "name": "frisbee"
+        },
+        {
+          "id": 31,
+          "name": "skis"
+        },
+        {
+          "id": 32,
+          "name": "snowboard"
+        },
+        {
+          "id": 33,
+          "name": "sports ball"
+        },
+        {
+          "id": 34,
+          "name": "kite"
+        },
+        {
+          "id": 35,
+          "name": "baseball bat"
+        },
+        {
+          "id": 36,
+          "name": "baseball glove"
+        },
+        {
+          "id": 37,
+          "name": "skateboard"
+        },
+        {
+          "id": 38,
+          "name": "surfboard"
+        },
+        {
+          "id": 39,
+          "name": "tennis racket"
+        },
+        {
+          "id": 40,
+          "name": "bottle"
+        },
+        {
+          "id": 41,
+          "name": "wine glass"
+        },
+        {
+          "id": 42,
+          "name": "cup"
+        },
+        {
+          "id": 43,
+          "name": "fork"
+        },
+        {
+          "id": 44,
+          "name": "knife"
+        },
+        {
+          "id": 45,
+          "name": "spoon"
+        },
+        {
+          "id": 46,
+          "name": "bowl"
+        },
+        {
+          "id": 47,
+          "name": "banana"
+        },
+        {
+          "id": 48,
+          "name": "apple"
+        },
+        {
+          "id": 49,
+          "name": "sandwich"
+        },
+        {
+          "id": 50,
+          "name": "orange"
+        },
+        {
+          "id": 51,
+          "name": "broccoli"
+        },
+        {
+          "id": 52,
+          "name": "carrot"
+        },
+        {
+          "id": 53,
+          "name": "hot dog"
+        },
+        {
+          "id": 54,
+          "name": "pizza"
+        },
+        {
+          "id": 55,
+          "name": "donut"
+        },
+        {
+          "id": 56,
+          "name": "cake"
+        },
+        {
+          "id": 57,
+          "name": "chair"
+        },
+        {
+          "id": 58,
+          "name": "couch"
+        },
+        {
+          "id": 59,
+          "name": "potted plant"
+        },
+        {
+          "id": 60,
+          "name": "bed"
+        },
+        {
+          "id": 61,
+          "name": "dining table"
+        },
+        {
+          "id": 62,
+          "name": "toilet"
+        },
+        {
+          "id": 63,
+          "name": "tv"
+        },
+        {
+          "id": 64,
+          "name": "laptop"
+        },
+        {
+          "id": 65,
+          "name": "mouse"
+        },
+        {
+          "id": 66,
+          "name": "remote"
+        },
+        {
+          "id": 67,
+          "name": "keyboard"
+        },
+        {
+          "id": 68,
+          "name": "cell phone"
+        },
+        {
+          "id": 69,
+          "name": "microwave"
+        },
+        {
+          "id": 70,
+          "name": "oven"
+        },
+        {
+          "id": 71,
+          "name": "toaster"
+        },
+        {
+          "id": 72,
+          "name": "sink"
+        },
+        {
+          "id": 73,
+          "name": "stroller"
+        },
+        {
+          "id": 74,
+          "name": "rider"
+        },
+        {
+          "id": 75,
+          "name": "scooter"
+        },
+        {
+          "id": 76,
+          "name": "vase"
+        },
+        {
+          "id": 77,
+          "name": "scissors"
+        },
+        {
+          "id": 78,
+          "name": "face"
+        },
+        {
+          "id": 79,
+          "name": "other vehicle"
+        },
+        {
+          "id": 80,
+          "name": "license plate"
+        }
+      ],
+      "sample_image_file_names": [
+        "data/video-4FRnNpmSmwktFJKjg-frame-000745-L6K5SC6fYjHNC8uff.jpg",
+        "data/video-4FRnNpmSmwktFJKjg-frame-000746-9CgazXqHXeEATqtKz.jpg",
+        "data/video-4FRnNpmSmwktFJKjg-frame-000747-5fX8MRXnhudnRjLy4.jpg",
+        "data/video-4FRnNpmSmwktFJKjg-frame-000748-8AJ9KRsmJcR8z8Pab.jpg",
+        "data/video-4FRnNpmSmwktFJKjg-frame-000749-KGpSoLMW2kWqvGhMG.jpg"
+      ]
+    }
+  ],
+  "other_json_files": [
+    "images_rgb_train/index.json",
+    "images_rgb_val/index.json",
+    "images_thermal_train/index.json",
+    "images_thermal_val/index.json",
+    "video_rgb_test/index.json",
+    "video_thermal_test/index.json"
+  ],
+  "json_errors": [],
+  "warnings": [
+    "Some image paths are not explicitly marked thermal or RGB; confirm their modality manually."
+  ],
+  "audit_scope": "Read-only filesystem and metadata audit; image/annotation mapping and split leakage need separate validation."
+}

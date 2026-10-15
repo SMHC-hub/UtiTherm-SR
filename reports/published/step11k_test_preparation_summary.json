@@ -1,0 +1,47 @@
+{
+  "annotation_records": 62317,
+  "config_sha256": "3303352fbc8036cc0dc8bafcb5f43477e96b0d274374a1eabeb989bc0e6318dc",
+  "converted_boxes_by_yolo_class": {
+    "0": 12323,
+    "1": 113,
+    "2": 30517,
+    "3": 3314,
+    "5": 2634,
+    "6": 696,
+    "7": 6758,
+    "8": 5660
+  },
+  "converted_yolo_boxes": 62015,
+  "created_utc": "2026-10-15T00:51:11.719296+00:00",
+  "data_output": "/workspace/data/processed/yolo_flir_lr_x2_test_step11k_v1",
+  "detector_inference_performed": false,
+  "dimensions": {
+    "input": [
+      640,
+      512
+    ],
+    "output": [
+      320,
+      256
+    ]
+  },
+  "excluded_annotations": 302,
+  "images": 3749,
+  "images_with_empty_yolo_labels": 256,
+  "limitations": [
+    "No detector predictions or test utility were measured; this is preparation only.",
+    "COCO categories other than the nine detector classes remain excluded.",
+    "Eight test sequence IDs disjoint from train/val; same FLIR ADAS v2 dataset family.",
+    "8-bit COCO JPG source, not radiometric TIFF.",
+    "Test set must not inform choice of model, confidence, penalty or selection policy."
+  ],
+  "manifest_content_sha256": "af97d628d3984eca440668603d775f3153bfd79962b4e8629bc1f6fed0b8a35c",
+  "method": "8-bit thermal JPG grayscale conversion + PIL BICUBIC 640x512->320x256",
+  "protocol": "STEP11K_FROZEN_FLIR_VIDEO_TEST_INPUT_PREPARATION_V1",
+  "read_only_sources": true,
+  "report_output": "/workspace/reports/test/step11k_test_preparation_v1",
+  "sequences": 8,
+  "source_audit_summary_sha256": "4202af35c68685cc580f916058c497c92402c06548bb4d93301fac40d88f2561",
+  "source_coco_sha256": "8da913c6cf57fd148afdd2ec81716e6bc44f1869308b92d6b6280263788d487a",
+  "source_step11j_config_sha256": "003438a60bef7105d8cca1eba7e7e39ea066ec01084cbfe167cf029d9b293715"
+}

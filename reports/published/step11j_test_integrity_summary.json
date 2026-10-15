@@ -1,0 +1,230 @@
+{
+  "coco_category_to_yolo": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "6": 4,
+    "8": 5,
+    "10": 7,
+    "12": 8,
+    "79": 6
+  },
+  "config_sha256": "003438a60bef7105d8cca1eba7e7e39ea066ec01084cbfe167cf029d9b293715",
+  "created_utc": "2026-10-15T00:37:42.020680+00:00",
+  "dataset_splits": {
+    "test": {
+      "annotated_images": 3493,
+      "annotation_records": 62317,
+      "category_counts": {
+        "1": 12323,
+        "2": 113,
+        "3": 30517,
+        "4": 3314,
+        "8": 2634,
+        "10": 6758,
+        "11": 277,
+        "12": 5660,
+        "17": 25,
+        "79": 696
+      },
+      "coco_sha256": "8da913c6cf57fd148afdd2ec81716e6bc44f1869308b92d6b6280263788d487a",
+      "images": 3749,
+      "sequences": 8,
+      "video_ids_sha256": "ed4e075f0bb25a03d4eb369a637fa779b1caf28d74e2819edcb6e8f80f9345b9"
+    },
+    "train": {
+      "annotated_images": 10478,
+      "annotation_records": 175040,
+      "category_counts": {
+        "1": 50478,
+        "2": 7237,
+        "3": 73623,
+        "4": 1116,
+        "6": 2245,
+        "7": 5,
+        "8": 829,
+        "10": 16198,
+        "11": 1095,
+        "12": 20770,
+        "17": 4,
+        "18": 8,
+        "37": 29,
+        "73": 15,
+        "75": 15,
+        "79": 1373
+      },
+      "coco_sha256": "3002e26d4c79ff777dff5ec9200e459630b338e4b7a78871b4d892edd1e9420a",
+      "images": 10742,
+      "sequences": 133,
+      "video_ids_sha256": "9f64d4e09f6feb20491030ccbf76ef70c69b628ecca6aa5523e7cb1fe2530562"
+    },
+    "val": {
+      "annotated_images": 1128,
+      "annotation_records": 16696,
+      "category_counts": {
+        "1": 4470,
+        "2": 170,
+        "3": 7133,
+        "4": 55,
+        "6": 179,
+        "8": 46,
+        "10": 2005,
+        "11": 94,
+        "12": 2472,
+        "37": 3,
+        "73": 6,
+        "79": 63
+      },
+      "coco_sha256": "14726d929f26229fd0b5059f8ca02613473affd66fda3fd790213a98b59ba486",
+      "images": 1144,
+      "sequences": 17,
+      "video_ids_sha256": "74f526c20805c5b63aa66cbac5036d31cffa765f9be06f9241503f8f36d6b226"
+    }
+  },
+  "excluded_test_categories": {
+    "11": 277,
+    "17": 25
+  },
+  "excluded_test_crowds": {},
+  "included_test_annotation_classes": {
+    "0": 12323,
+    "1": 113,
+    "2": 30517,
+    "3": 3314,
+    "5": 2634,
+    "6": 696,
+    "7": 6758,
+    "8": 5660
+  },
+  "limitations": [
+    "Metadata and training-pipeline parity only, NO predictions on test images.",
+    "Video IDs are disjoint; cannot rule out cross-sequence near-duplicate image content.",
+    "Test JPG is not raw radiometric TIFF; pairing to existing 8-bit model is intentional.",
+    "COCO excluded categories are ignored as unlabeled by current nine-class detector; diagnostic FPs may include them.",
+    "A test split of FLIR ADAS v2, NOT external cross-dataset generalization.",
+    "Preprocessing and label conversion require validation parity before any test evaluator.",
+    "Do not use this test split for method/threshold hyperparameter selection."
+  ],
+  "model_class_names": {
+    "0": "person",
+    "1": "bike",
+    "2": "car",
+    "3": "motor",
+    "4": "bus",
+    "5": "truck",
+    "6": "other_vehicle",
+    "7": "light",
+    "8": "sign"
+  },
+  "protocol": "STEP11J_FLIR_DISJOINT_TEST_PREPARATION_READ_ONLY_AUDIT_V1",
+  "ready_for_test_preparation": true,
+  "sequence_disjoint": true,
+  "test_source": "8-bit COCO-referenced thermal JPG; raw TIFF is NOT used",
+  "validation_image_calibration": {
+    "exact_image_matches_by_method": {
+      "cv2_area": 0,
+      "cv2_cubic": 0,
+      "cv2_linear": 0,
+      "pil_bicubic": 51,
+      "pil_bilinear": 0,
+      "pil_lanczos": 0
+    },
+    "exactly_matching_methods": [
+      "pil_bicubic"
+    ],
+    "example_rows": [
+      {
+        "file_name": "video-57kWWRyeqqHs3Byei-frame-000816-b6tuLjNco8MfoBs3d.jpg",
+        "match": {
+          "cv2_area": false,
+          "cv2_cubic": false,
+          "cv2_linear": false,
+          "pil_bicubic": true,
+          "pil_bilinear": false,
+          "pil_lanczos": false
+        },
+        "max_abs_diff": {
+          "cv2_area": 20,
+          "cv2_cubic": 43,
+          "cv2_linear": 20,
+          "pil_bicubic": 0,
+          "pil_bilinear": 24,
+          "pil_lanczos": 10
+        },
+        "processed_lr_sha256": "9a2ef81ea5f6cb237b892dcbb3a834f41cefc9de772412e34a471b61c2b570d7",
+        "source_sha256": "7b16c00124856f0c683e6184737e0fef22e4afb9318426cdd1f26d0c5265e625"
+      },
+      {
+        "file_name": "video-AP7PvpujjZZGLnsJt-frame-000000-BtPxgMNTh9n5jZTB6.jpg",
+        "match": {
+          "cv2_area": false,
+          "cv2_cubic": false,
+          "cv2_linear": false,
+          "pil_bicubic": true,
+          "pil_bilinear": false,
+          "pil_lanczos": false
+        },
+        "max_abs_diff": {
+          "cv2_area": 19,
+          "cv2_cubic": 37,
+          "cv2_linear": 19,
+          "pil_bicubic": 0,
+          "pil_bilinear": 18,
+          "pil_lanczos": 6
+        },
+        "processed_lr_sha256": "db13d7c10f6b0ebc5687c6a07383d249ba24ae55479f6dcdf6ddbb1dfde8462d",
+        "source_sha256": "791cf4007b12e950ae6230909ee92d3d0ca2d89355dab41e2fa7a39cdf61da32"
+      },
+      {
+        "file_name": "video-CcyAxT5682LqWZtBv-frame-000600-ShmvcMeEWEGiEWgsJ.jpg",
+        "match": {
+          "cv2_area": false,
+          "cv2_cubic": false,
+          "cv2_linear": false,
+          "pil_bicubic": true,
+          "pil_bilinear": false,
+          "pil_lanczos": false
+        },
+        "max_abs_diff": {
+          "cv2_area": 12,
+          "cv2_cubic": 25,
+          "cv2_linear": 12,
+          "pil_bicubic": 0,
+          "pil_bilinear": 14,
+          "pil_lanczos": 8
+        },
+        "processed_lr_sha256": "baab20c835dd93d2dfe4bcdddff27832fd32e2b3e86165cfb34ae14bab5dd038",
+        "source_sha256": "09cabd3a3376f84b70f08cbd2b0f030f64ef1f414ccfb26a656ef6225911d290"
+      }
+    ],
+    "frames": 51,
+    "max_abs_pixel_error_by_method": {
+      "cv2_area": 34,
+      "cv2_cubic": 64,
+      "cv2_linear": 34,
+      "pil_bicubic": 0,
+      "pil_bilinear": 30,
+      "pil_lanczos": 16
+    },
+    "mean_absolute_pixel_error_by_method": {
+      "cv2_area": 0.982587,
+      "cv2_cubic": 2.229221,
+      "cv2_linear": 0.982587,
+      "pil_bicubic": 0.0,
+      "pil_bilinear": 1.018262,
+      "pil_lanczos": 0.588378
+    }
+  },
+  "validation_label_calibration": {
+    "example_failures": [],
+    "ignored_val_categories": {
+      "11": 94,
+      "37": 3,
+      "73": 6
+    },
+    "images": 1144,
+    "matches": 1144,
+    "mismatches": 0
+  }
+}
