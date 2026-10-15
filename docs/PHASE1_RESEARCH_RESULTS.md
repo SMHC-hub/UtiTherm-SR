@@ -176,12 +176,10 @@ Two independent end-to-end evaluation runs were executed across separate Docker 
 
 ---
 
-## 9. Future Research: Phase 2 (FideTherm-SR)
+## 9. Future Work
 
-To address the limitations uncovered in Phase 1, follow-up research is proposed under the project name **FideTherm-SR** (*Fidelity-Preserving and Detection-Aware Thermal Super-Resolution*):
-- **Detection-Aware Training Loss:** Training the super-resolution network with downstream object detection gradient feedback (feature loss / perceptual loss from detector backbones) rather than pixel MSE alone.
-- **Physical Thermal Degradation Modeling:** Incorporating non-uniformity correction (NUC) noise, thermal diffusion, and optical point spread function (PSF) degradations.
-- **Adaptive Region Budgets:** Moving beyond fixed grid tiles to bounding-box-guided or saliency-driven non-rectangular continuous blending.
-- **Cross-Dataset Validation:** Benchmarking on distinct thermal sensor datasets (KAIST Multispectral, Teledyne FLIR Thermal Dataset, etc.).
-
-*(Note: FideTherm-SR is a proposed future research direction; Phase 1 remains the completed foundation.)*
+Avenues for future research extending from this benchmark include:
+- Exploring task-aligned loss objectives that optimize thermal enhancement directly for downstream perception utility.
+- Characterizing physical sensor noise, non-uniformity correction artifacts, and optical degradation models.
+- Evaluating non-rectangular, continuous spatial blending techniques to eliminate boundary transitions.
+- Assessing cross-sensor generalization across alternative thermal benchmarking datasets.

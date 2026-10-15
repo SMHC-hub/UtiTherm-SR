@@ -286,15 +286,13 @@ UtiTherm-SR/
 
 ---
 
-## 14. Future Research: Phase 2 (FideTherm-SR)
+## 14. Future Work
 
-Building on the findings of UtiTherm-SR Phase 1, a proposed follow-up research direction is planned under the name **FideTherm-SR** (*Fidelity-Preserving and Detection-Aware Thermal Super-Resolution*):
-- **Detection-Aware Loss Formulations:** Training super-resolution architectures using perceptual and detector backbone gradients rather than pixel MSE alone.
-- **Physical Thermal Degradation Models:** Replacing synthetic Bicubic downsampling with sensor-accurate point spread functions (PSF) and non-uniformity thermal noise.
-- **Boundary-Aware Soft Attention:** Replacing rectangular grid tiles with continuous bounding-box attention or saliency masks to eliminate tile border artifacts.
-- **Cross-Dataset Generalization:** Benchmarking across diverse thermal sensor platforms (e.g., KAIST Multispectral and Teledyne FLIR datasets).
-
-*(Note: FideTherm-SR is a proposed future research direction and is not claimed as completed work.)*
+Potential avenues for extending this benchmark include:
+- Investigating task-driven loss functions that couple super-resolution directly with object detection objectives.
+- Modeling sensor-specific thermal degradations and optical non-uniformities beyond synthetic Bicubic downsampling.
+- Exploring continuous, boundary-aware region blending strategies to mitigate edge transitions.
+- Validating findings across additional thermal camera modalities and independent sensor benchmarks.
 
 ---
 
