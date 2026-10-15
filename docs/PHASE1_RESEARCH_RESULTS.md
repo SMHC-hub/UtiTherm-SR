@@ -1,7 +1,7 @@
 # Phase 1 Research Results & Technical Report
 
 **Project:** UtiTherm-SR  
-**Author:** Syed Huzaifa Chishty (SMHC)  
+**Author:** SM Huzaifa Chishty (SMHC)  
 **Evaluation Protocol:** Step 11L — Predeclared Sequence-Disjoint FLIR Video Test (`STEP11L_PREDECLARED_SEQUENCE_DISJOINT_FLIR_VIDEO_TEST_V1`)  
 **Status:** Completed Phase 1  
 **Reproducibility Verification:** Bit-for-bit identical predictions across independent container executions (`step11l_full_3749_a` and `step11l_full_3749_b`)

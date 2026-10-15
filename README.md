@@ -311,8 +311,8 @@ This project is open-source software licensed under the **GNU Affero General Pub
 If you use this benchmark protocol, codebase, or findings in your academic work, please cite:
 
 ```bibtex
-@software{Chishty_UtiTherm-SR_2026,
-  author       = {Syed Huzaifa Chishty},
+@software{SMHC_UtiTherm-SR_2026,
+  author       = {SM Huzaifa Chishty},
   title        = {{UtiTherm-SR: Region-Selective Thermal Super-Resolution for Object Detection}},
   year         = {2026},
   month        = {10},

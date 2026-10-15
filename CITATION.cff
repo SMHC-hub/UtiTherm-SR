@@ -12,7 +12,7 @@ abstract: >-
   full-image Bicubic interpolation under frozen models and deterministic GPU execution.
 authors:
   - family-names: "Chishty"
-    given-names: "Syed Huzaifa"
+    given-names: "SM Huzaifa"
     alias: "SMHC"
     email: "syedhuzaifachishty@gmail.com"
 keywords:
