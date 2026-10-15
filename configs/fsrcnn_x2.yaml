@@ -1,0 +1,17 @@
+# UtiTherm-SR Phase 1 / Step 4B: FSRCNN x2 learned thermal SR baseline.
+# Train ONLY from images/train (never from official FLIR validation or test).
+train_hr: data/processed/yolo_flir/images/train
+output: reports/sr_baseline/fsrcnn_train_v1
+canonical_checkpoint: models/sr/fsrcnn_x2_v1.pt
+seed: 42
+val_fraction: 0.10  # held-out video-sequence groups from training images
+lr_patch: 48         # synthetic 48x48 LR -> 96x96 HR target patch
+batch: 16
+workers: 2
+epochs: 30
+patience: 8
+learning_rate: 0.001
+# Standard lightweight FSRCNN design (1-channel thermal)
+d: 56
+s: 12
+m: 4

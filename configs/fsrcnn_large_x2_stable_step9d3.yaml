@@ -1,0 +1,22 @@
+# UtiTherm-SR / Step 9D3: stability retraining after the 1e-3 Large-FSRCNN divergence.
+# Keep official FLIR validation and previous FSRCNN checkpoints untouched.
+train_hr: data/processed/yolo_flir/images/train
+output: reports/sr/fsrcnn_large_x2_stable_step9d3_v1
+canonical_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+seed: 42
+val_fraction: 0.10
+lr_patch: 48
+batch: 8
+workers: 2
+epochs: 40
+patience: 10
+learning_rate: 0.0001
+max_grad_norm: 1.0
+max_batch_mse: 10.0
+lr_plateau_patience: 4
+lr_plateau_factor: 0.5
+min_learning_rate: 0.000001
+# Same 148,009-parameter architecture as Step 9C/9D1; no architecture changes.
+d: 168
+s: 36
+m: 10

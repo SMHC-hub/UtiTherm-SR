@@ -1,0 +1,15 @@
+# Generated from configs/fsrcnn_x2.yaml; do not overwrite the original.
+train_hr: data/processed/yolo_flir/images/train
+output: reports/sr/fsrcnn_large_x2_step9d_v1
+canonical_checkpoint: models/sr/fsrcnn_large_x2_step9d_v1.pt
+seed: 42
+val_fraction: 0.1
+lr_patch: 48
+batch: 8
+workers: 2
+epochs: 30
+patience: 8
+learning_rate: 0.001
+d: 168
+s: 36
+m: 10

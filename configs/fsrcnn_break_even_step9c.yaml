@@ -1,0 +1,27 @@
+# UtiTherm-SR Step 9C — GPU computational feasibility screening.
+# Medium/large/xlarge networks are RANDOMLY INITIALIZED and NOT trained.
+# These settings preserve the original Step 9C benchmark defaults.
+data_config: configs/selective_sr_eval.yaml
+sr_checkpoint: models/sr/fsrcnn_x2_v1.pt
+frames: 8
+repeats: 5
+warmup: 3
+seed: 42
+# External Step 8B selector-only median, in milliseconds; estimate only.
+selector_ms: 1.107
+candidates:
+  - name: medium_untrained
+    scale: 2
+    d: 112
+    s: 24
+    m: 8
+  - name: large_untrained
+    scale: 2
+    d: 168
+    s: 36
+    m: 10
+  - name: xlarge_untrained
+    scale: 2
+    d: 224
+    s: 48
+    m: 12

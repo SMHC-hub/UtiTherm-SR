@@ -1,0 +1,5 @@
+source_lr: data/processed/yolo_flir_lr_x2
+source_hr: data/processed/yolo_flir
+sr_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+detection_checkpoint: models/detection/yolo11n_lr_baseline_v1.pt
+batch: 8
