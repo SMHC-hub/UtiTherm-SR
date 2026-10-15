@@ -1,0 +1,22 @@
+# UtiTherm-SR Phase 1: low-resolution detector baseline.
+# Do not alter settings between comparison experiments without logging the change.
+model: yolo11n.pt
+train:
+  data: /workspace/data/processed/yolo_flir_lr_x2/data.yaml
+  epochs: 50
+  imgsz: 320
+  batch: 8
+  device: 0
+  workers: 2
+  patience: 12
+  cache: false
+  amp: true
+  seed: 42
+  deterministic: true
+  # Thermal images are grayscale: disable color-space augmentations.
+  hsv_h: 0.0
+  hsv_s: 0.0
+  hsv_v: 0.0
+  plots: true
+  project: /workspace/reports/yolo_baseline
+  name: lr_50epochs_v1
