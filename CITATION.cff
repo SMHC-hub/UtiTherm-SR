@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software or benchmark protocol in your research, please cite it as below."
 title: "UtiTherm-SR: Region-Selective Thermal Super-Resolution for Object Detection"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-15
 license: AGPL-3.0
 repository-code: "https://github.com/SMHC-hub/UtiTherm-SR"

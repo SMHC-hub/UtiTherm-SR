@@ -6,8 +6,9 @@
 [![Python: 3.11](https://img.shields.io/badge/Python-3.11-3776AB.svg?logo=python&logoColor=white)](pyproject.toml)
 [![PyTorch: 2.9.1+cu128](https://img.shields.io/badge/PyTorch-2.9.1%2Bcu128-EE4C2C.svg?logo=pytorch&logoColor=white)](Dockerfile)
 [![CUDA: 12.8](https://img.shields.io/badge/CUDA-12.8-76B900.svg?logo=nvidia&logoColor=white)](compose.yaml)
-[![Tests: 858 passed](https://img.shields.io/badge/Tests-858%20passed-success.svg)](tests/)
+[![Tests: 870 passed](https://img.shields.io/badge/Tests-870%20passed-success.svg)](tests/)
 [![Docker: Reproducible](https://img.shields.io/badge/Docker-Reproducible%20Build-2496ED.svg?logo=docker&logoColor=white)](Dockerfile)
+[![CI](https://github.com/SMHC-hub/UtiTherm-SR/actions/workflows/ci.yml/badge.svg)](https://github.com/SMHC-hub/UtiTherm-SR/actions/workflows/ci.yml)
 
 ---
 
@@ -77,7 +78,7 @@ flowchart TD
 | Method Identifier | Description | Processing Strategy |
 |---|---|---|
 | `full_bicubic_640` | **Full Bicubic Baseline** | Classical OpenCV Bicubic interpolation to $640 \times 512$. Zero neural network overhead. |
-| `full_large_fsrcnn_640` | **Full Large FSRCNN** | End-to-end neural super-resolution across the entire image using Large FSRCNN ($d=64, s=16, m=6$). |
+| `full_large_fsrcnn_640` | **Full Large FSRCNN** | End-to-end neural super-resolution across the entire image using Large FSRCNN ($d=168, s=36, m=10$). |
 | `random4_bicubic_first_h10` | **Random 4-Region Control** | Immutable Bicubic base; 4 randomly sampled tiles (fixed seed) enhanced with Large FSRCNN. |
 | `contrast4_bicubic_first_h10` | **Contrast 4-Region SR** | Immutable Bicubic base; top-4 highest-contrast tiles enhanced with Large FSRCNN. |
 
@@ -97,9 +98,9 @@ Verified and pinned dependencies from the research environment:
 - **Language:** Python `3.11.14`
 - **Deep Learning Framework:** PyTorch `2.9.1+cu128` (CUDA `12.8`, cuDNN `91002`)
 - **Object Detection:** Ultralytics YOLO `8.4.177` (YOLO11n architecture)
-- **Computer Vision:** OpenCV `5.0.0` (opencv-python-headless `4.8+`)
+- **Computer Vision:** OpenCV `5.0.0` (`opencv-python==5.0.0.93`; `cv2.__version__` reports `5.0.0`)
 - **Scientific Computing:** NumPy `2.3.4`, scikit-learn `1.6.1`
-- **Testing Suite:** Pytest `8.4.2` (858 automated unit and regression tests)
+- **Testing Suite:** Pytest `8.4.2` (870 automated unit and regression tests)
 
 ---
 
@@ -241,7 +242,13 @@ Run the self-contained demonstration script (no dataset download required):
 ```bash
 docker compose run --rm research python examples/demo_pipeline.py
 ```
-This generates synthetic thermal scenes, performs Bicubic upsampling, selective FSRCNN composition, and utility scoring in `examples/output/`.
+This generates synthetic thermal scenes, performs Bicubic upsampling, selective FSRCNN composition, and
+displays frozen Step 11L utility results in `examples/output/`.
+
+> [!NOTE]
+> The demo loads the trained checkpoints at `models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt` and `models/detection/yolo11n_lr_baseline_v1.pt`.
+> If checkpoints are absent, the script exits with clear instructions on training or acquiring them.
+> See [`docs/MODEL_CHECKPOINTS.md`](docs/MODEL_CHECKPOINTS.md) for checkpoint acquisition and SHA-256 hashes.
 
 ### 4. Reproducing Frozen Step 11L Test Results
 When the FLIR ADAS v2 dataset and model checkpoints are available:
@@ -272,8 +279,9 @@ UtiTherm-SR/
 ├── src/
 │   └── utitherm/           # Core library: SR, ROI selection, blending, detection
 ├── scripts/                # Training, auditing, evaluation, and benchmark scripts
-├── tests/                  # Automated pytest suite (858 unit and integration tests)
+├── tests/                  # Automated pytest suite (870 unit and integration tests)
 ├── docs/                   # Detailed technical reports and step-by-step logs
+│   ├── MODEL_CHECKPOINTS.md   # Checkpoint paths, hashes, architecture and acquisition guide
 │   ├── PHASE1_RESEARCH_RESULTS.md # Comprehensive Phase 1 research results
 │   └── ...                 # Historical step documentation
 ├── reports/
@@ -288,11 +296,8 @@ UtiTherm-SR/
 
 ## 14. Future Work
 
-Potential avenues for extending this benchmark include:
-- Investigating task-driven loss functions that couple super-resolution directly with object detection objectives.
-- Modeling sensor-specific thermal degradations and optical non-uniformities beyond synthetic Bicubic downsampling.
-- Exploring continuous, boundary-aware region blending strategies to mitigate edge transitions.
-- Validating findings across additional thermal camera modalities and independent sensor benchmarks.
+This work establishes a reproducible Phase 1 baseline. Future research directions remain unpublished.
+Interested researchers are welcome to build on the codebase, evaluation protocol, and published results.
 
 ---
 
@@ -314,7 +319,7 @@ If you use this benchmark protocol, codebase, or findings in your academic work,
   title        = {{UtiTherm-SR: Region-Selective Thermal Super-Resolution for Object Detection}},
   year         = {2026},
   month        = {10},
-  version      = {1.0.0},
+  version      = {1.0.1},
   publisher    = {GitHub},
   url          = {https://github.com/SMHC-hub/UtiTherm-SR}
 }
