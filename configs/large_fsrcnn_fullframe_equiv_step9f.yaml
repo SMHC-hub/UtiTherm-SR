@@ -1,0 +1,10 @@
+# Step 9F3: independent full-frame pixel-reference check of batched selective ROI SR.
+# This is an engineering/development audit, not final evaluation or detection testing.
+selective_config: configs/selective_sr_eval.yaml
+sr_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+predictor_checkpoint: models/utility/roi_utility_v2.pt
+predictor_source_csv: reports/utility/v2_labels_300_v1/roi_utility.csv
+halos: [10, 12, 16]
+limit: 4                       # 0 = all 20 existing predictor-held-out TRAIN-domain images
+max_uint8_difference_tolerance: 1  # diagnostic threshold; do not silently assert equivalence
+seed: 2026

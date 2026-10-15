@@ -1,0 +1,21 @@
+# Step 10E: read-only audit of frozen Step 10D development measurements.
+# Does NOT run a detector, modify checkpoints, or create training labels.
+detection_csv: reports/development/step10d_full_200_v1/detection_per_image.csv
+timing_csv: reports/development/step10d_full_200_v1/timing_per_trial.csv
+source_summary: reports/development/step10d_full_200_v1/summary.json
+output_dir: reports/development/step10e_error_audit_v1
+expected_images: 200
+expected_sequences: 17
+expected_repeats: 3
+fp_penalty: 0.25
+fp_penalty_sensitivity: [0.0, 0.10, 0.25, 0.50, 1.0]
+bootstrap_repetitions: 10000
+bootstrap_seed: 1510
+worst_images_per_pair: 20
+pairs:
+  - [predictor_v3_large_roi4_h10, predictor_large_roi4_h10]
+  - [predictor_v3_large_roi4_h10, random_large_roi4_h10]
+  - [predictor_v3_large_roi4_h10, full_large_fsrcnn_640]
+  - [predictor_v3_large_roi4_h10, full_bicubic_640]
+  - [predictor_v3_large_roi4_h10, predictor_v3_large_roi4_h16]
+  - [predictor_large_roi4_h10, full_bicubic_640]

@@ -1,0 +1,13 @@
+# Retrospective fixed-threshold audit on locked, reused FLIR DEV set.
+# Detector predicts once at 0.25. Apply >=0.25 confidence cuts POST-NMS,
+# re-running the same class-aware greedy GT matcher for each cut.
+step11g_config: configs/bicubic_first_deterministic_step11g.yaml
+reference_step11g_summary: reports/development/step11g_full_200_a/summary.json
+verified_step11g_summary: reports/development/step11g_full_200_b/summary.json
+thresholds: [0.25, 0.30, 0.35, 0.40, 0.50]
+base_confidence: 0.25
+fp_penalty: 0.25
+expected_images: 200
+expected_sequences: 17
+bootstrap_seed: 211
+bootstrap_iterations: 4000

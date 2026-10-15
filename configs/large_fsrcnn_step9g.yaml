@@ -1,0 +1,12 @@
+# Step 9G: same frozen 200-image FLIR development split as Step 7A.
+# This is NOT a pristine final test set. No model or dataset is modified.
+base_development_config: configs/development_eval.yaml
+frozen_manifest: reports/development/split_200_v2/manifest.json
+large_sr_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+predictor_v2_checkpoint: models/utility/roi_utility_v2.pt
+predictor_v2_training_csv: reports/utility/v2_labels_300_v1/roi_utility.csv
+halos: [10, 16]
+budget_tiles: 4
+false_positive_penalty: 0.25
+expected_images: 200
+expected_sequences: 17

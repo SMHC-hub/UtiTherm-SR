@@ -1,0 +1,18 @@
+# Step 7A: larger FLIR validation-domain development evaluation.
+# This is not an untouched FINAL test: FLIR val was already used in Step 4.
+eval_lr: data/processed/yolo_flir_lr_x2/images/val
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+utility_csv: reports/utility/probe_train_100_v1/roi_utility.csv
+split_manifest: reports/utility/predictor_v1/split_manifest.json
+predictor_checkpoint: models/utility/roi_utility_v1.pt
+detector_checkpoint: models/detection/yolo11n_lr_baseline_v1.pt
+sr_checkpoint: models/sr/fsrcnn_x2_v1.pt
+seed: 42
+max_per_sequence: 20
+budget_tiles: 4
+imgsz: 640
+confidence: 0.25
+nms_iou: 0.7
+false_positive_penalty: 0.25
+feather_hr_px: 8
+device: '0'

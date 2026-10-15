@@ -1,0 +1,11 @@
+# Step 11H: descriptive spatial FP audit, no retraining or model selection.
+# This reuses the exact deterministic Step11G protocol and its saved fingerprint reference.
+step11g_config: configs/bicubic_first_deterministic_step11g.yaml
+verified_step11g_summary: reports/development/step11g_full_200_b/summary.json
+reference_step11g_summary: reports/development/step11g_full_200_a/summary.json
+fp_pair_iou: 0.50
+boundary_hr_pixels: 8
+expected_images: 200
+expected_sequences: 17
+confidence: 0.25
+fp_penalty: 0.25
