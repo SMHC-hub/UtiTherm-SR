@@ -1,0 +1,19 @@
+# Step 7B2A: NEW detector-TRAIN sequences; not a final unbiased test.
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+val_lr: data/processed/yolo_flir_lr_x2/images/val
+v1_roi_csv: reports/utility/probe_train_100_v1/roi_utility.csv
+v1_split_manifest: reports/utility/predictor_v1/split_manifest.json
+detector_checkpoint: models/detection/yolo11n_lr_baseline_v1.pt
+seed: 142
+max_per_sequence: 10
+# Do not silently accept a tiny set of distinct sequences for the full run.
+min_unique_sequences: 30
+# Keep experiment exactly matched to Step 5A.
+grid_rows: 4
+grid_cols: 4
+feather_hr_px: 8
+imgsz: 640
+confidence: 0.25
+nms_iou: 0.7
+false_positive_penalty: 0.25
+device: '0'

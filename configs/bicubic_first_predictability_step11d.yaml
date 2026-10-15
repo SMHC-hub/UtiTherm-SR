@@ -1,0 +1,19 @@
+# Step 11D: exploratory LOW-COST predictability of marginal gain over Bicubic.
+# No detector/SR inference, no retraining detector/SR, no final validation.
+source_csv: reports/utility/step11a_full_300_v1/incremental_roi_utility.csv
+source_summary: reports/utility/step11a_full_300_v1/summary.json
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+out: reports/utility/step11d_predictability_v1
+expected_images: 300
+expected_sequences: 33
+expected_tiles_per_image: 16
+expected_interventions: 4800
+fp_penalty: 0.25
+seed: 143
+val_sequence_fraction: 0.15
+test_sequence_fraction: 0.15
+budget_tiles: 4
+bootstrap_iterations: 4000
+image_width_lr: 320
+image_height_lr: 256
+scoring: marginal_one_tile_utility_sum_proxy_ONLY

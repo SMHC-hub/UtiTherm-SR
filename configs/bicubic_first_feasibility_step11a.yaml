@@ -1,0 +1,13 @@
+# Step 11A: exploratory counterfactual feasibility, NO new training.
+# Only detector TRAIN frames from the already locked Step 7B2A sample.
+# Bicubic whole-frame baseline; replace ONE tile with Large FSRCNN x2.
+base_collection_config: configs/utility_v2_data.yaml
+frozen_manifest: reports/utility/v2_fresh_split_300_v2/manifest.json
+large_sr_checkpoint: models/sr/fsrcnn_large_x2_stable_step9d3_v1.pt
+expected_images: 300
+expected_sequences: 33
+halo: 10
+feather_hr_px: 8
+budget_tiles: 1
+baseline: full_bicubic_640
+intervention: bicubic_base_single_large_fsrcnn_roi_x2_h10_feather8

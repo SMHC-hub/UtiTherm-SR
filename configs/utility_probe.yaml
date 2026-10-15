@@ -1,0 +1,12 @@
+# UtiTherm-SR Step 5A — exploratory utility targets, training split ONLY.
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+checkpoint: models/detection/yolo11n_lr_baseline_v1.pt
+seed: 42
+grid_rows: 4
+grid_cols: 4
+feather_hr_px: 8
+imgsz: 640
+confidence: 0.25
+nms_iou: 0.7
+false_positive_penalty: 0.25
+device: '0'

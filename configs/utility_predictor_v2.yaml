@@ -1,0 +1,25 @@
+# Step 7B2B: V2 uses 100 OLD + 300 NEW detector-TRAIN frames only.
+# Preserve the V1 checkpoint and freeze V2 train/val/test sequence IDs.
+v1_roi_csv: reports/utility/probe_train_100_v1/roi_utility.csv
+fresh_roi_csv: reports/utility/v2_labels_300_v1/roi_utility.csv
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+v1_checkpoint: models/utility/roi_utility_v1.pt
+output: reports/utility/predictor_v2
+canonical_checkpoint: models/utility/roi_utility_v2.pt
+seed: 143
+new_val_fraction: 0.15
+new_test_fraction: 0.15
+input_width: 80
+input_height: 64
+batch_images: 3
+workers: 0
+epochs: 40
+patience: 8
+learning_rate: 0.0003
+weight_decay: 0.0001
+pos_weight_cap: 8.0
+ranking_loss_weight: 0.6
+ranking_logit_scale: 4.0
+false_positive_penalty: 0.25
+budget_tiles: 4
+device: auto

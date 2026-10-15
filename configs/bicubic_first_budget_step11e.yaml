@@ -1,0 +1,22 @@
+# Step 11E: preset cheap-ROI budget + abstention study, not combined detection.
+# Uses the EXACT Step 11D source, held-out sequence split and feature extractor.
+source_csv: reports/utility/step11a_full_300_v1/incremental_roi_utility.csv
+source_summary: reports/utility/step11a_full_300_v1/summary.json
+step11d_split: reports/utility/step11d_predictability_v1/sequence_split.json
+step11d_summary: reports/utility/step11d_predictability_v1/summary.json
+step11d_test_per_image: reports/utility/step11d_predictability_v1/test_per_image.csv
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+out: reports/utility/step11e_budget_robustness_v1
+expected_images: 300
+expected_sequences: 33
+expected_tiles_per_image: 16
+expected_interventions: 4800
+fp_penalty: 0.25
+budgets: [0, 1, 2, 4]
+policies: [contrast, edge]
+# Normalized within-frame contrast score; threshold selection only on VAL.
+contrast_gate_z_thresholds: [0.0, 0.5, 1.0, 1.5, 2.0]
+gate_budgets: [0, 1, 2, 4]
+bootstrap_iterations: 4000
+bootstrap_seed: 143
+scoring: one_roi_marginal_utility_sum_proxy_ONLY

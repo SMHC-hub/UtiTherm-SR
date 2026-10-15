@@ -1,0 +1,18 @@
+# Exploratory analysis only: frozen 200-frame FLIR development evaluation, not final test.
+detection_csv: reports/development/large_step9g_200_v1/detection_per_image.csv
+expected_images: 200
+expected_sequences: 17
+fp_penalty: 0.25
+bootstrap_samples: 10000
+seed: 42
+comparisons:
+  - method: predictor_large_roi4_h10
+    reference: random_large_roi4_h10
+  - method: predictor_large_roi4_h10
+    reference: full_large_fsrcnn_640
+  - method: predictor_large_roi4_h10
+    reference: full_bicubic_640
+  - method: full_large_fsrcnn_640
+    reference: full_bicubic_640
+  - method: predictor_large_roi4_h10
+    reference: predictor_large_roi4_h16

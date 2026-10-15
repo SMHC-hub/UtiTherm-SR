@@ -1,0 +1,20 @@
+# UtiTherm-SR Phase 1 / Step 5B: exploratory TRAIN-only utility predictor.
+# Step 5A intervention labels; DO NOT use detection-val/test CSVs here.
+annotations_csv: reports/utility/probe_train_100_v1/roi_utility.csv
+train_lr: data/processed/yolo_flir_lr_x2/images/train
+output: reports/utility/predictor_v1
+canonical_checkpoint: models/utility/roi_utility_v1.pt
+seed: 42
+val_fraction: 0.20   # grouped by sequence; predictor val is TRAIN-domain only
+input_width: 80
+input_height: 64
+batch: 32
+workers: 0            # robust on Windows-mounted Docker volumes
+epochs: 40
+patience: 8
+learning_rate: 0.0005
+weight_decay: 0.0001
+pos_weight_cap: 15.0
+false_positive_penalty: 0.25 # MUST match Step 5A label generation
+budget_tiles: 4        # 4 of 16 regions, fixed 25% spatial budget (proxy)
+device: auto
