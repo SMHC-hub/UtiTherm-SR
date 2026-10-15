@@ -1,0 +1,10 @@
+# Torch and torchvision are already installed in the pinned CUDA runtime base image.
+# Re-check compatibility before bumping versions.
+ultralytics>=8.3,<9
+numpy>=1.26,<3
+Pillow>=10,<13
+PyYAML>=6,<7
+psutil>=5.9,<8
+opencv-python-headless>=4.8,<5
+pytest>=8,<10
+scikit-learn>=1.6,<2

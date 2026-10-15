@@ -1,0 +1,70 @@
+# ==============================================================================
+# UtiTherm-SR — Production .gitignore
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches and test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Secrets and environment configurations
+.env
+.env.*
+!.env.example
+
+# Large model weights and checkpoints (distributed separately via releases)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+models/*
+!models/.gitkeep
+weights/*
+!weights/.gitkeep
+
+# Datasets and processed image caches (FLIR ADAS v2 downloaded separately)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Experiment runs and intermediate training checkpoints
+runs/
+*.log
+examples/output/
+
+# Reports: preserve published research summaries, keep heavy local evaluation dumps out of Git
+reports/*
+!reports/.gitkeep
+!reports/published/
+!reports/published/**
+
+# Local IDE and editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
+desktop.ini

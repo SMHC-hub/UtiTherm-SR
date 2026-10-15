@@ -1,0 +1,21 @@
+services:
+  research:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: utitherm-sr:phase1
+    working_dir: /workspace
+    gpus: all
+    mem_limit: 12g
+    shm_size: 2gb
+    stdin_open: true
+    tty: true
+    environment:
+      PYTHONPATH: /workspace:/workspace/src
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      OMP_NUM_THREADS: "4"
+      OPENBLAS_NUM_THREADS: "4"
+      MKL_NUM_THREADS: "4"
+    volumes:
+      - ./:/workspace
+    command: bash
