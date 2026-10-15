@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+    branches: [main, quality-upgrade]
+  pull_request:
+    branches: [main]
+
+# Minimal permissions — read-only repository access
+permissions:
+  contents: read
+
+jobs:
+  test-cpu:
+    name: Unit tests (CPU, Python 3.11)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libgl1 libglib2.0-0
+
+      - name: Install CPU-only PyTorch (avoids ~2.5 GB GPU download)
+        run: |
+          pip install --upgrade pip
+          pip install torch torchvision \
+            --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Install project dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install --no-deps -e .
+
+      - name: Verify core package import
+        run: python -c "import utitherm; print('utitherm imported OK')"
+
+      - name: Run CPU unit tests
+        # Excludes four test files that require the FLIR ADAS v2 dataset on disk.
+        # All remaining tests run on CPU without any trained model checkpoints.
+        # test_demo_pipeline.py is included here; it uses mocks for YOLO and
+        # skips checkpoint-dependent subtests when models/ are absent.
+        run: |
+          pytest tests/ -q \
+            --ignore=tests/test_frozen_flir_test_step11l.py \
+            --ignore=tests/test_flir_audit.py \
+            --ignore=tests/test_flir_frozen_test_preparation_step11k.py \
+            --ignore=tests/test_flir_test_integrity_step11j.py \
+            -m "not requires_gpu and not requires_data" \
+            --tb=short
+        env:
+          PYTHONPATH: "${{ github.workspace }}:${{ github.workspace }}/src"
+
+      # NOTE: The full end-to-end demo (examples/demo_pipeline.py) requires
+      # trained model checkpoints that are not redistributed in this repository.
+      # Attempting to run it in CI without weights would exit with code 1.
+      # The demo is instead exercised by test_demo_pipeline.py above, which
+      # uses mocks and pytest.raises to verify checkpoint-absent error behaviour,
+      # architecture loading, YOLO result counting, and the synthetic SR pipeline.
+      # Full end-to-end demo verification is performed locally inside Docker:
+      #   docker compose run --rm research python examples/demo_pipeline.py
+
+  lint-check:
+    name: Syntax check (pyflakes)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pyflakes
+        run: |
+          pip install --upgrade pip
+          pip install pyflakes
+
+      - name: Syntax check — src/
+        run: python -m pyflakes src/
+
+      - name: Syntax check — examples/
+        run: python -m pyflakes examples/
+
+      - name: Syntax check — scripts/ (informational)
+        run: python -m pyflakes scripts/ || true
